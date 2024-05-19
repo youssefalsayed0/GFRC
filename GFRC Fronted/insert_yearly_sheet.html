@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Finance Report</title>
+    <link rel="shortcut icon" href="./imgs/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/media.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body id="body-pd">
+    <!--  start sidesidebar header-->
+    <header
+      class="header fixed-top start-0 d-flex align-items-center justify-content-between w-100"
+      id="header"
+    >
+      <div class="header_toggle">
+        <i class="fa-solid fa-bars" id="header-toggle"></i>
+      </div>
+      <div class="image">
+        <img src="./imgs/logo.png" alt="logo" class="img-fluid" />
+      </div>
+    </header>
+    <!--  end sidesidebar header-->
+
+    <!-- side sidebar -->
+    <div class="l-sidebar fixed-top vh-100" id="sidebar-bar">
+      <sidebar
+        class="sidebar h-100 d-flex justify-content-between flex-column overflow-hidden"
+      >
+        <div>
+          <a href="./user_home.html" class="sidebar_logo mb-5">
+            <i class="fa-solid fa-house sidebar_logo-icon"></i>
+            <span class="sidebar_logo-name">Xyris</span>
+          </a>
+
+          <div class="sidebar_list">
+            <a href="./estimated_budget.html" class="sidebar_link">
+              <i class="fa-solid fa-file-invoice-dollar fa-fw sidebar-icon"></i>
+              <span class="sidebar_name">Budget P&L</span>
+            </a>
+
+            <a href="./actual_budget.html" class="sidebar_link">
+              <i class="fa-solid fa-money-bill-wave fa-fw sidebar-icon"></i>
+              <span class="sidebar_name">Actual P&L</span>
+            </a>
+
+            <a href="./actual_cashflow.html" class="sidebar_link">
+              <i class="fa-solid fa-dollar-sign fa-fw sidebar-icon"></i>
+              <span class="sidebar_name">Actual Cashflow</span>
+            </a>
+
+            <a href="./budget_cashflow.html" class="sidebar_link">
+              <i class="fa-solid fa-cash-register fa-fw sidebar-icon"></i>
+              <span class="sidebar_name">Budget Cashflow</span>
+            </a>
+
+            <a href="./insert_yearly_sheet.html" class="sidebar_link active">
+              <i class="fa-solid fa-file fa-fw sidebar-icon"></i>
+              <span class="sidebar_name">Insert a Sheet</span>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <a href="./change_password.html" class="sidebar_link">
+            <i class="fa-solid fa-key fa-fw sidebar-icon"></i>
+            <span class="sidebar_name">Change Password</span>
+          </a>
+          <a href="./login.html" class="sidebar_link">
+            <i
+              class="fa-solid fa-arrow-right-from-bracket fa-fw sidebar-icon"
+            ></i>
+            <span class="sidebar_name">SignOut</span>
+          </a>
+        </div>
+      </sidebar>
+    </div>
+    <!-- side sidebar -->
+
+    <!-----------------------Container Main start----------------->
+    <main class="main">
+      <!------------------------ start title------------------------>
+      <section class="title2 main-p d-flex align-items-end position-relative">
+        <div class="container">
+          <h1 class="fw-bold position-relative">Upload an excel sheet</h1>
+        </div>
+      </section>
+      <!-------------------------------- end title ------------------------------------>
+      <!-----------------------  start file selector ------------------->
+
+      <section class="file-section main-p">
+        <div class="container">
+          <div class="row align-items-end justify-content-lg-center gy-4">
+            <!-- Dropdown list with 6 elements -->
+            <div class="col-auto">
+              <label for="dropdown" class="form-label">Choose an option:</label>
+              <select class="form-select" id="dropdown" name="dropdown">
+                <option value="1">New P&amp;L Actual</option>
+                <option value="2">New P&amp;L Budget</option>
+                <option value="4">Update Current P&amp;L Actual</option>
+                <option value="3">Update Current P&amp;L Budget</option>
+                <option value="5">New Cashflow Actual</option>
+                <option value="6">New Cashflow Budget</option>
+                <option value="8">Update Current Cashflow Actual</option>
+                <option value="7">Update Current Cashflow Budget</option>
+              </select>
+            </div>
+
+            <!-- File upload button -->
+            <div class="col-auto">
+              <label for="fileUpload" class="form-label">Upload a file :</label>
+              <input
+                type="file"
+                class="form-control"
+                id="fileUpload"
+                name="fileUpload"
+              />
+            </div>
+
+            <!-- Submit button -->
+            <div class="col-auto">
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-----------------------  end file selector ------------------->
+    </main>
+    <!--------------------------Container Main end------------------------>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+
+
+</html>
